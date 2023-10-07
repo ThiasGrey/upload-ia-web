@@ -9,7 +9,7 @@ export function VideoInputForm() {
 
     const [videoFile, setVideoFile] = useState<File | null>(null)
 
-    function handleFileSelece(event: ChangeEvent<HTMLInputElement>){
+    function handleFileSeleceted(event: ChangeEvent<HTMLInputElement>){
 
         const { files } = event.currentTarget
         
@@ -43,7 +43,7 @@ export function VideoInputForm() {
           id="video"
           accept="video/mp4"
           className="sr-only"
-          onChange={handleFileSelece}
+          onChange={handleFileSeleceted}
         />
 
         <Separator />
