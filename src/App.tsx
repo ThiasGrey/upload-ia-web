@@ -48,7 +48,7 @@ export function App() {
             {" "}
             Lembre-se, você pode utilizar a variável{" "}
             <code className="text-violet-400">{"{transcription}"}</code> para
-            adicionar o conteúdo da transcrição do video{" "}
+            adicionar o conteúdo da transcrição do video teste{" "}
           </p>
         </div>
 
