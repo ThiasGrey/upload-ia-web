@@ -6,7 +6,10 @@ import { Button } from "./ui/button";
 import { ChangeEvent, FormEvent, useMemo, useRef, useState } from "react";
 import { getFFmpeg } from "@/lib/ffmpeg";
 import { fetchFile } from "@ffmpeg/util";
+<<<<<<< HEAD
 import { api } from "@/lib/axios";
+=======
+>>>>>>> bdc6f9dc04c2b03d3f605a52ad12e5f073e198ae
 
 export function VideoInputForm() {
   const [videoFile, setVideoFile] = useState<File | null>(null);
@@ -68,6 +71,10 @@ export function VideoInputForm() {
     event.preventDefault();
 
     const prompt = promptImputRef.current?.value;
+<<<<<<< HEAD
+=======
+    console.log(prompt);
+>>>>>>> bdc6f9dc04c2b03d3f605a52ad12e5f073e198ae
 
     if (!videoFile) {
       return;
@@ -76,6 +83,7 @@ export function VideoInputForm() {
     //converter video em audio
 
     const audioFile = await convertVideoToAudio(videoFile);
+<<<<<<< HEAD
     console.log(audioFile, prompt);
 
     //enviar para o servidor
@@ -102,6 +110,19 @@ export function VideoInputForm() {
     return URL.createObjectURL(videoFile);
   }, [videoFile]);
 
+=======
+    console.log(audioFile);
+  }
+
+  const previewURL = useMemo(() => {
+    if (!videoFile) {
+      return null;
+    }
+
+    return URL.createObjectURL(videoFile);
+  }, [videoFile]);
+
+>>>>>>> bdc6f9dc04c2b03d3f605a52ad12e5f073e198ae
   return (
     <form onSubmit={handleUploadVideo} className="space-y-6 w-full">
       <label
